@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/action_filter"
+        android:title="Sort"
+        app:showAsAction="always"
+        android:orderInCategory="100">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/costLowToHigh"
+                    android:title="Cost(low to high)"/>
+
+                <item
+                    android:id="@+id/costHighToLow"
+                    android:title="Cost(high to low)"/>
+
+                <item
+                    android:id="@+id/rating"
+                    android:icon="@drawable/ic_action_rating"
+                    android:title="Rating"
+                    android:checked="true"/>
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

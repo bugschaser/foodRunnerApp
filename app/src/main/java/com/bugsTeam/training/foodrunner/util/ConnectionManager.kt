@@ -1,0 +1,17 @@
+@file:Suppress("DEPRECATION")
+
+package com.bugsTeam.training.foodrunner.util
+
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+
+class ConnectionManager {
+    fun isNetworkAvailable(context: Context):Boolean{
+        val connectivityManager=context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetworkInfo:NetworkInfo ?= connectivityManager.activeNetworkInfo
+        return if(activeNetworkInfo?.isConnected != null){
+            activeNetworkInfo.isConnected
+        } else false
+    }
+}

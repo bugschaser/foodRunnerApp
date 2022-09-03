@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/app_background"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+        />
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_50"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:drawableStart="@drawable/ic_person"
+        android:drawableLeft="@drawable/ic_person"
+        android:hint="@string/name_min_3_characters"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/etEmailAddress"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etName"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawableLeft="@drawable/ic_mail"
+        android:hint="@string/email_address"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etMobile"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:drawableLeft="@drawable/ic_phone"
+        android:layout_below="@id/etEmailAddress"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:hint="@string/mobile_number_10_digits"
+        android:importantForAutofill="no"
+        android:drawableStart="@drawable/ic_phone" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:drawableLeft="@drawable/ic_action_address"
+        android:layout_below="@id/etMobile"
+        android:inputType="textMultiLine"
+        android:maxLength="10"
+        android:hint="@string/delivery_address"
+        android:drawableStart="@drawable/ic_action_address"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/etResetPassword"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_below="@id/etAddress"
+        android:drawableLeft="@drawable/ic_lock"
+        android:inputType="numberPassword"
+        android:hint="@string/password_min_4_characters"
+        android:importantForAutofill="no"
+        android:drawableStart="@drawable/ic_lock" />
+
+    <EditText
+        android:id="@+id/etResetConfirmPassword"
+        style="@style/CustomEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_below="@id/etResetPassword"
+        android:drawableLeft="@drawable/ic_lock"
+        android:inputType="numberPassword"
+        android:hint="@string/confirm_password"
+        android:autofillHints=""
+        android:drawableStart="@drawable/ic_lock" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_below="@id/etResetConfirmPassword"
+        android:text="@string/register"/>
+
+
+</RelativeLayout>

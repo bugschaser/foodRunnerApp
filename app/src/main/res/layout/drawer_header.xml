@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_240"
+    android:background="@color/colorPrimary"
+    android:id="@+id/header">
+
+    <ImageView
+        android:layout_width="@dimen/width_80"
+        android:layout_height="@dimen/height_80"
+        android:src="@drawable/profile_icon"
+        android:layout_marginTop="@dimen/margin_48"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"
+        />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:text="@string/app_name"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/txtMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:textAllCaps="false"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+</LinearLayout>
