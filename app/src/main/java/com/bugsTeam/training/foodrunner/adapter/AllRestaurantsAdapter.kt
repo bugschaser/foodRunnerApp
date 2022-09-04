@@ -72,6 +72,7 @@ class AllRestaurantsAdapter(val context: Context, var restaurants:ArrayList<Rest
             context.startActivity(cardIntent)
         }
         holder.favImageView.setOnClickListener {
+            print("Hello");
             if(!isFav){
                 //if Entity is add successfully change favourite image
                 if (DBAsyncTask(context,resEntity,2).execute().get()) {
