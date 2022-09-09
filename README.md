@@ -20,9 +20,9 @@ The FoodRunner App is an android app for ordering food online.This application i
 - Homepage:
   This page is used to list out all the restaurants and also restaurant by its name.
   It filter out restaurant by using three parameter:
-    1. Cost( High to Low )
-    2. Cost( Low to High )
-    3. Ratings
+  1. Cost( High to Low )
+  2. Cost( Low to High )
+  3. Ratings
 - Favourites:
 
 ## Credits
