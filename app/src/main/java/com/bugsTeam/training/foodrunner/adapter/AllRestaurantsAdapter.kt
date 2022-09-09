@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -63,16 +64,20 @@ class AllRestaurantsAdapter(val context: Context, var restaurants:ArrayList<Rest
         val isFav=DBAsyncTask(context,resEntity,1).execute().get()
 
         holder.cardRestaurants.setOnClickListener {
+            Log.e("ISFAV",isFav.toString());
+//            print(isFav);
             val dataBundle=Bundle()
             dataBundle.putInt("id",resObjects.id)
             dataBundle.putString("res_name",resObjects.name)
-            dataBundle.putString("isImagFav",isFav.toString())
+            dataBundle.putString("isImagFav",DBAsyncTask(context,resEntity,1).execute().get().toString())
             val cardIntent= Intent(context,RestaurantDetailActivity::class.java)
             cardIntent.putExtra("data",dataBundle)
             context.startActivity(cardIntent)
         }
         holder.favImageView.setOnClickListener {
             print("Hello");
+            Log.e("Before ISFAVS",isFav.toString());
+
             if(!isFav){
                 //if Entity is add successfully change favourite image
                 if (DBAsyncTask(context,resEntity,2).execute().get()) {
@@ -89,6 +94,8 @@ class AllRestaurantsAdapter(val context: Context, var restaurants:ArrayList<Rest
 
                 }
             }
+            Log.e("After ISFAVS",isFav.toString());
+
         }
     }
 
@@ -97,7 +104,8 @@ class AllRestaurantsAdapter(val context: Context, var restaurants:ArrayList<Rest
     }
 
     @Suppress("DEPRECATION")
-    class DBAsyncTask(context: Context, val restaurantEntity: RestaurantEntity, val mode: Int): AsyncTask<Void, Void, Boolean>(){
+    class DBAsyncTask(context: Context, val restaurantEntity: RestaurantEntity,
+                      val mode: Int): AsyncTask<Void, Void, Boolean>(){
         /*
         Mode 1->Check DB if the restaurant is or favourite or not
         Mode 2->Save the restaurant into DB as favourite
