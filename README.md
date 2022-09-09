@@ -1,5 +1,5 @@
 # FoodRunner App
-The FoodRunner App is an android app for ordering food online.This application is built using (Kotlin and XML) as frontend language in an Android Studio IDE.
+The FoodRunner App is an android app for ordering food online.This application is built using (Kotlin and XML) as frontend language in an Android Studio IDE.It uses Volley library to send GET and POST requests through REST api calls. Also, uses the Room library to send data to the SQLite local database
 
 ## Features
 - Profile Customization and Registration
